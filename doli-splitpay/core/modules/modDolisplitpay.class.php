@@ -1,5 +1,3 @@
-<?php
-
 include_once DOL_DOCUMENT_ROOT . "/core/modules/DolibarrModules.class.php";
 
 class modDolisplitpay extends DolibarrModules
@@ -14,11 +12,15 @@ class modDolisplitpay extends DolibarrModules
         $this->rights_class = 'dolisplitpay';
         $this->family = "financial";
         $this->name = preg_replace('/^mod/i', '', get_class($this));
-        $this->description = "Module de gestion d'échéancier de paiement (fractionnement)";
+        $this->description = "Module de gestion d\u00e9ch\u00e9ancier de paiement (fractionnement)";
         $this->version = '1.0.0';
         $this->const_name = 'MAIN_MODULE_' . strtoupper($this->name);
         $this->picto = 'bill';
-        $this->module_parts = array();
+
+        $this->module_parts = array(
+            'hooks' => array('invoicecard')
+        );
+
         $this->dirs = array("/doli-splitpay/temp");
         $this->config_page_url = array("setup.php@doli-splitpay");
 
@@ -26,10 +28,8 @@ class modDolisplitpay extends DolibarrModules
             array('mysql' => 'sql/install.sql')
         );
 
+        $this->langfiles = array("dolisplitpay");
+
         $this->menu = array();
     }
 }
-
-$this->module_parts = array(
-    'hooks' => array('invoicecard')
-);
