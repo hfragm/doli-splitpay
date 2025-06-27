@@ -29,3 +29,7 @@ class modDolisplitpay extends DolibarrModules
         $this->menu = array();
     }
 }
+
+$this->module_parts = array(
+    'hooks' => array('invoicecard')
+);

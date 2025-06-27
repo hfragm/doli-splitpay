@@ -1,0 +1,12 @@
+ConvertToSplitpay=Convertir en échéancier
+InvoiceRef=Facture
+TotalTTC=Total TTC
+CurrencyEUR=€
+NumberOfInstallments=Nombre de mensualités
+StartDate=Date de début
+GenerateSchedule=Générer l'échéancier
+SchedulePreview=Aperçu de l'échéancier
+InstallmentNum=Mensualité n°
+DueDate=Date d'échéance
+Amount=Montant
+MissingFields=Veuillez remplir tous les champs
